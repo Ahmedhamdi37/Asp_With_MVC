@@ -1,0 +1,30 @@
+﻿@using Asp_With_MVC.DAL.DataBase.Entities
+@model Employee
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+       Details
+    </div>
+    @if(Model==null)
+    {
+        <div class="alert alert-danger" role="alert">
+            There is no Data :(
+        </div>
+    }
+    else
+    {
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@Model?.Id</li>
+            <li class="list-group-item">@Model?.Name</li>
+            <li class="list-group-item">@Model?.Salary</li>
+        </ul>
+    }
+  
+</div>
